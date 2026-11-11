@@ -1,0 +1,93 @@
+# Sports betting paper-trading bot. Every setting lives here.
+# Odds come from The Odds API (the-odds-api.com). The free plan gives 500 credits a month.
+
+bankroll: 1000          # starting paper money
+currency: AUD
+
+# --- What the bot asks The Odds API for -----------------------------------
+# Every 10 bookmakers listed below cost 1 credit per sport per run (h2h market).
+# The list mixes "sharp" books (used to work out the true probability) with
+# Australian books you could actually bet at. Run `python run.py books` to see
+# every bookmaker key available, then edit this list.
+bookmakers:
+  - pinnacle        # sharp: the market-maker the world copies
+  - betfair_ex_au   # sharp: betting exchange, prices set by punters
+  - sportsbet
+  - tab
+  - ladbrokes_au
+  - neds
+  - pointsbetau
+  - betr_au
+  - unibet
+  - bet365_au
+# Leave `bookmakers` empty and set regions instead to get every book in a region.
+# Each region costs 1 credit per sport per run. Regions: au, uk, eu, us.
+regions: [au]
+markets: [h2h]          # head-to-head / win-draw-win. Keep it to one market on the free plan.
+
+# --- The sports, by country ------------------------------------------------
+# Keys come from `python run.py sports`. A key ending in * matches every league or
+# tournament starting with that text, e.g. tennis_atp_* is every ATP event.
+# Out-of-season sports are skipped automatically and cost nothing.
+sports:
+  # Australia
+  aussierules_afl:            {name: AFL,              country: Australia}
+  rugbyleague_nrl:            {name: NRL,              country: Australia}
+  soccer_australia_aleague:   {name: A-League,         country: Australia}
+  basketball_nbl:             {name: NBL,              country: Australia}
+  cricket_big_bash:           {name: Big Bash,         country: Australia}
+  # England and Europe
+  soccer_epl:                 {name: Premier League,   country: England}
+  soccer_spain_la_liga:       {name: La Liga,          country: Spain}
+  soccer_germany_bundesliga:  {name: Bundesliga,       country: Germany}
+  soccer_italy_serie_a:       {name: Serie A,          country: Italy}
+  soccer_france_ligue_one:    {name: Ligue 1,          country: France}
+  soccer_uefa_champs_league:  {name: Champions League, country: Europe}
+  # USA
+  americanfootball_nfl:       {name: NFL,              country: USA}
+  basketball_nba:             {name: NBA,              country: USA}
+  baseball_mlb:               {name: MLB,              country: USA}
+  icehockey_nhl:              {name: NHL,              country: USA}
+  # Worldwide. Many tournaments, so they eat credits. Turn on if you have credits spare.
+  tennis_atp_*:               {name: ATP Tennis,       country: World, enabled: false}
+  tennis_wta_*:               {name: WTA Tennis,       country: World, enabled: false}
+
+# --- Credit budget -----------------------------------------------------------
+budget:
+  monthly_credits: 500      # 500 = free plan. The paid plan with 20,000 removes most limits.
+  runs_per_day: 1           # must match the schedule in .github/workflows/bet.yml
+  reserve: 30               # always keep this many for checking results
+
+# --- The maths -------------------------------------------------------------
+strategy:
+  devig: power              # how bookmaker margin is removed: multiplicative | power | shin
+  book_weights:             # how much each book counts towards the "true" probability
+    pinnacle: 4
+    betfair_ex_au: 3
+    betfair_ex_eu: 3
+    betfair_ex_uk: 3
+  default_weight: 1
+  sharp_books: [pinnacle, betfair_ex_au, betfair_ex_eu, betfair_ex_uk]
+  bettable_books: [sportsbet, tab, ladbrokes_au, neds, pointsbetau, betr_au, unibet, bet365_au]
+  min_books: 4              # need at least this many prices before trusting the consensus
+  no_sharp_extra_edge: 0.02 # if no sharp book is pricing a game, demand this much more edge
+  stale_minutes: 90         # ignore a book whose price is this much older than the freshest
+  min_edge: 0.03            # bet only if expected value is at least +3%
+  max_edge: 0.20            # "edges" bigger than this are almost always a stale or wrong price
+  min_odds: 1.30
+  max_odds: 5.00            # long shots are where the maths is least reliable
+  lookahead_hours: 48       # consider games starting within this window
+  min_minutes_to_start: 30
+
+# --- Staking and risk ----------------------------------------------------------
+staking:
+  kelly_fraction: 0.25      # quarter-Kelly: grows the bankroll more slowly but survives bad runs
+  max_stake_pct: 0.02       # never more than 2% of bankroll on one bet
+  min_stake: 5
+  max_open_exposure_pct: 0.20  # total money on unsettled bets
+  one_bet_per_game: true
+
+# --- Historical test (European football, football-data.co.uk) --------------
+backtest:
+  leagues: {E0: Premier League, SP1: La Liga, D1: Bundesliga, I1: Serie A, F1: Ligue 1}
+  seasons: ["1920", "2021", "2122", "2223", "2324", "2425"]
