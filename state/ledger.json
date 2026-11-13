@@ -1,34 +1,8 @@
 {
  "started": "2026-11-11T10:26:11Z",
  "start_bankroll": 1000,
- "cash": 961.9300000000001,
+ "cash": 980.7865,
  "open": [
-  {
-   "book": "sportsbet",
-   "selection": "Perth Wildcats",
-   "odds": 1.95,
-   "fair_prob": 0.5316679805811904,
-   "fair_odds": 1.880873094721361,
-   "edge": 0.03675256213332112,
-   "books_used": 8,
-   "sharp": true,
-   "event_id": "7ee63c7510601a977256cda9261dab62",
-   "sport": "basketball_nbl",
-   "league": "NBL",
-   "country": "Australia",
-   "commence": "2026-11-12T10:36:00Z",
-   "game": "Perth Wildcats v Tasmania JackJumpers",
-   "outcomes": [
-    "Perth Wildcats",
-    "Tasmania JackJumpers"
-   ],
-   "id": "62842b67b8",
-   "placed": "2026-11-11T10:26:11Z",
-   "stake": 9.67,
-   "close_fair_prob": 0.5316679805811904,
-   "close_best_odds": 1.95,
-   "close_seen": "2026-11-11T10:26:11Z"
-  },
   {
    "book": "sportsbet",
    "selection": "Sydney Kings",
@@ -54,6 +28,38 @@
    "close_fair_prob": 0.7963111978352834,
    "close_best_odds": 1.42,
    "close_seen": "2026-11-12T10:07:57Z"
+  }
+ ],
+ "settled": [
+  {
+   "book": "sportsbet",
+   "selection": "Perth Wildcats",
+   "odds": 1.95,
+   "fair_prob": 0.5316679805811904,
+   "fair_odds": 1.880873094721361,
+   "edge": 0.03675256213332112,
+   "books_used": 8,
+   "sharp": true,
+   "event_id": "7ee63c7510601a977256cda9261dab62",
+   "sport": "basketball_nbl",
+   "league": "NBL",
+   "country": "Australia",
+   "commence": "2026-11-12T10:36:00Z",
+   "game": "Perth Wildcats v Tasmania JackJumpers",
+   "outcomes": [
+    "Perth Wildcats",
+    "Tasmania JackJumpers"
+   ],
+   "id": "62842b67b8",
+   "placed": "2026-11-11T10:26:11Z",
+   "stake": 9.67,
+   "close_fair_prob": 0.5316679805811904,
+   "close_best_odds": 1.95,
+   "close_seen": "2026-11-11T10:26:11Z",
+   "result": "won",
+   "payout": 18.86,
+   "profit": 9.19,
+   "settled_at": "2026-11-13T10:04:14Z"
   },
   {
    "book": "unibet",
@@ -79,10 +85,13 @@
    "stake": 8.4,
    "close_fair_prob": 0.49821490155207804,
    "close_best_odds": 2.08,
-   "close_seen": "2026-11-12T10:07:57Z"
+   "close_seen": "2026-11-12T10:07:57Z",
+   "result": "lost",
+   "payout": 0.0,
+   "profit": -8.4,
+   "settled_at": "2026-11-13T10:04:14Z"
   }
  ],
- "settled": [],
  "history": [
   {
    "t": "2026-11-11T10:26:11Z",
@@ -93,6 +102,11 @@
    "t": "2026-11-12T10:07:57Z",
    "equity": 1000.0,
    "cash": 961.93
+  },
+  {
+   "t": "2026-11-13T10:04:14Z",
+   "equity": 1000.79,
+   "cash": 980.79
   }
  ],
  "runs": [
@@ -121,31 +135,19 @@
    ],
    "skipped_for_budget": [],
    "credits_used": 4.0
-  }
- ],
- "last_scan": [
-  {
-   "league": "NBL",
-   "game": "Cairns Taipans v Sydney Kings",
-   "selection": "Sydney Kings",
-   "book": "sportsbet",
-   "odds": 1.42,
-   "fair_odds": 1.2361879450912805,
-   "edge": 0.1486926447055319,
-   "commence": "2026-11-13T08:36:00Z",
-   "status": "already bet this game"
   },
   {
-   "league": "NBL",
-   "game": "New Zealand Breakers v Brisbane Bullets",
-   "selection": "Brisbane Bullets",
-   "book": "unibet",
-   "odds": 2.08,
-   "fair_odds": 2.007165977743182,
-   "edge": 0.03628699522832246,
-   "commence": "2026-11-13T06:36:00Z",
-   "status": "bet"
+   "t": "2026-11-13T10:04:14Z",
+   "settled": 2,
+   "placed": 0,
+   "scanned": [
+    "icehockey_nhl",
+    "basketball_nbl"
+   ],
+   "skipped_for_budget": [],
+   "credits_used": 4.0
   }
  ],
- "credits_remaining": 492.0
+ "last_scan": [],
+ "credits_remaining": 488.0
 }
