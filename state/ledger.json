@@ -2,34 +2,7 @@
  "started": "2026-11-11T10:26:11Z",
  "start_bankroll": 1000,
  "cash": 980.7865,
- "open": [
-  {
-   "book": "sportsbet",
-   "selection": "Sydney Kings",
-   "odds": 1.42,
-   "fair_prob": 0.7296030512209827,
-   "fair_odds": 1.3706083031403322,
-   "edge": 0.03603633273379536,
-   "books_used": 7,
-   "sharp": true,
-   "event_id": "5a6598501b9f244d3e807b7ef08ff3be",
-   "sport": "basketball_nbl",
-   "league": "NBL",
-   "country": "Australia",
-   "commence": "2026-11-13T08:36:00Z",
-   "game": "Cairns Taipans v Sydney Kings",
-   "outcomes": [
-    "Cairns Taipans",
-    "Sydney Kings"
-   ],
-   "id": "71d45a28ac",
-   "placed": "2026-11-11T10:26:11Z",
-   "stake": 20.0,
-   "close_fair_prob": 0.7963111978352834,
-   "close_best_odds": 1.42,
-   "close_seen": "2026-11-12T10:07:57Z"
-  }
- ],
+ "open": [],
  "settled": [
   {
    "book": "sportsbet",
@@ -90,6 +63,36 @@
    "payout": 0.0,
    "profit": -8.4,
    "settled_at": "2026-11-13T10:04:14Z"
+  },
+  {
+   "book": "sportsbet",
+   "selection": "Sydney Kings",
+   "odds": 1.42,
+   "fair_prob": 0.7296030512209827,
+   "fair_odds": 1.3706083031403322,
+   "edge": 0.03603633273379536,
+   "books_used": 7,
+   "sharp": true,
+   "event_id": "5a6598501b9f244d3e807b7ef08ff3be",
+   "sport": "basketball_nbl",
+   "league": "NBL",
+   "country": "Australia",
+   "commence": "2026-11-13T08:36:00Z",
+   "game": "Cairns Taipans v Sydney Kings",
+   "outcomes": [
+    "Cairns Taipans",
+    "Sydney Kings"
+   ],
+   "id": "71d45a28ac",
+   "placed": "2026-11-11T10:26:11Z",
+   "stake": 20.0,
+   "close_fair_prob": 0.7963111978352834,
+   "close_best_odds": 1.42,
+   "close_seen": "2026-11-12T10:07:57Z",
+   "result": "lost",
+   "payout": 0.0,
+   "profit": -20.0,
+   "settled_at": "2026-11-14T09:51:05Z"
   }
  ],
  "history": [
@@ -106,6 +109,11 @@
   {
    "t": "2026-11-13T10:04:14Z",
    "equity": 1000.79,
+   "cash": 980.79
+  },
+  {
+   "t": "2026-11-14T09:51:05Z",
+   "equity": 980.79,
    "cash": 980.79
   }
  ],
@@ -146,8 +154,19 @@
    ],
    "skipped_for_budget": [],
    "credits_used": 4.0
+  },
+  {
+   "t": "2026-11-14T09:51:05Z",
+   "settled": 1,
+   "placed": 0,
+   "scanned": [
+    "americanfootball_nfl",
+    "basketball_nba"
+   ],
+   "skipped_for_budget": [],
+   "credits_used": 4.0
   }
  ],
  "last_scan": [],
- "credits_remaining": 488.0
+ "credits_remaining": 484.0
 }
