@@ -115,6 +115,11 @@
    "t": "2026-11-14T09:51:05Z",
    "equity": 980.79,
    "cash": 980.79
+  },
+  {
+   "t": "2026-11-15T09:52:08Z",
+   "equity": 980.79,
+   "cash": 980.79
   }
  ],
  "runs": [
@@ -165,8 +170,20 @@
    ],
    "skipped_for_budget": [],
    "credits_used": 4.0
+  },
+  {
+   "t": "2026-11-15T09:52:08Z",
+   "settled": 0,
+   "placed": 0,
+   "scanned": [
+    "americanfootball_nfl",
+    "basketball_nba",
+    "icehockey_nhl"
+   ],
+   "skipped_for_budget": [],
+   "credits_used": 3.0
   }
  ],
  "last_scan": [],
- "credits_remaining": 484.0
+ "credits_remaining": 481.0
 }
