@@ -130,6 +130,11 @@
    "t": "2026-11-17T10:12:49Z",
    "equity": 980.79,
    "cash": 980.79
+  },
+  {
+   "t": "2026-11-18T10:09:59Z",
+   "equity": 980.79,
+   "cash": 980.79
   }
  ],
  "runs": [
@@ -217,8 +222,20 @@
    ],
    "skipped_for_budget": [],
    "credits_used": 3.0
+  },
+  {
+   "t": "2026-11-18T10:09:59Z",
+   "settled": 0,
+   "placed": 0,
+   "scanned": [
+    "icehockey_nhl",
+    "basketball_nbl",
+    "soccer_australia_aleague"
+   ],
+   "skipped_for_budget": [],
+   "credits_used": 3.0
   }
  ],
  "last_scan": [],
- "credits_remaining": 474.0
+ "credits_remaining": 471.0
 }
