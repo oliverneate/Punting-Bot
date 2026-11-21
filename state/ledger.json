@@ -145,6 +145,11 @@
    "t": "2026-11-20T10:10:24Z",
    "equity": 980.79,
    "cash": 980.79
+  },
+  {
+   "t": "2026-11-21T09:52:58Z",
+   "equity": 980.79,
+   "cash": 980.79
   }
  ],
  "runs": [
@@ -278,8 +283,44 @@
    ],
    "skipped_for_budget": [],
    "credits_used": 8.0
+  },
+  {
+   "t": "2026-11-21T09:52:58Z",
+   "settled": 0,
+   "placed": 0,
+   "scanned": [
+    "americanfootball_nfl",
+    "soccer_epl",
+    "soccer_germany_bundesliga",
+    "soccer_australia_aleague"
+   ],
+   "skipped_for_budget": [],
+   "credits_used": 4.0
   }
  ],
- "last_scan": [],
- "credits_remaining": 455.0
+ "last_scan": [
+  {
+   "league": "Premier League",
+   "game": "Chelsea v Leeds United",
+   "selection": "Leeds United",
+   "book": "pointsbetau",
+   "odds": 4.1,
+   "fair_odds": 3.858757163006368,
+   "edge": 0.06251827383863628,
+   "commence": "2026-11-21T15:00:00Z",
+   "status": "stake too small"
+  },
+  {
+   "league": "Premier League",
+   "game": "Chelsea v Leeds United",
+   "selection": "Draw",
+   "book": "pointsbetau",
+   "odds": 3.8,
+   "fair_odds": 3.631743617713137,
+   "edge": 0.04632936682705924,
+   "commence": "2026-11-21T15:00:00Z",
+   "status": "stake too small"
+  }
+ ],
+ "credits_remaining": 451.0
 }
